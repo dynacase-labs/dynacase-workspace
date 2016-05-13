@@ -17,7 +17,7 @@ function ws_popupdocfolder(Action & $action)
     $dirid = $action->getArgument("dirid");
     $abstract = ($action->getArgument("abstract", 'N') == "Y");
     $zone = $action->getArgument("zone"); // special zone
-    $dbaccess = $action->GetParam("FREEDOM_DB");
+    $dbaccess = $action->dbaccess;
     $doc = new_Doc($dbaccess, $docid);
     $fld = new_Doc($dbaccess, $dirid);
     //  if ($doc->doctype=="C") return; // not for familly

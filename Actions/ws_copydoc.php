@@ -22,7 +22,7 @@ function ws_copydoc(Action & $action)
     $docid = GetHttpVars("id");
     $dirid = GetHttpVars("paddid");
     $addft = GetHttpVars("addft", "del");
-    $dbaccess = $action->GetParam("FREEDOM_DB");
+    $dbaccess = $action->dbaccess;
     
     $action->lay->set("warning", "");
     $taction = array();

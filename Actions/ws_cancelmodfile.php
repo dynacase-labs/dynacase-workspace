@@ -16,7 +16,7 @@ function ws_cancelmodfile(Action & $action)
 {
     
     $docid = $action->getArgument("id");
-    $dbaccess = $action->GetParam("FREEDOM_DB");
+    $dbaccess = $action->dbaccess;
     $autoclose = ($action->getArgument("autoclose", "N") == "Y"); // close window after
     $doc = new_doc($dbaccess, $docid);
     if (!$doc->isAlive()) $action->exitError(sprintf(_("document %s does not exist") , $docid));

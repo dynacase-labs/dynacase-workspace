@@ -21,7 +21,7 @@ function ws_addversion(Action & $action)
     $newcomment = $action->getArgument("comversion");
     $newstate = $action->getArgument("newstate");
     $autoclose = ($action->getArgument("autoclose", "N") == "Y"); // close window after
-    $dbaccess = $action->GetParam("FREEDOM_DB");
+    $dbaccess = $action->dbaccess;
     
     $doc = new_doc($dbaccess, $docid);
     if (!$doc->isAlive()) $action->exitError(sprintf(_("document %s does not exist") , $docid));

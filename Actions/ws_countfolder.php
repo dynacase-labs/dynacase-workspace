@@ -21,7 +21,7 @@ function ws_countfolder(Action & $action)
     
     $mb = microtime();
     $docid = GetHttpVars("id");
-    $dbaccess = $action->GetParam("FREEDOM_DB");
+    $dbaccess = $action->dbaccess;
     
     $action->lay->set("warning", "");
     $taction = array();
