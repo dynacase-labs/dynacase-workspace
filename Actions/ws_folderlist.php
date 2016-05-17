@@ -1,7 +1,7 @@
 <?php
 /*
  * @author Anakeen
- */
+*/
 /*
  * Display doucment explorer
  *
@@ -35,7 +35,7 @@ function ws_folderlist(Action & $action)
     $key = $action->getArgument("key");
     $smode = $action->getArgument("searchmode");
     $dorder = ($action->getArgument("dorder", "true") == "true");
-    $dbaccess = $action->GetParam("FREEDOM_DB");
+    $dbaccess = $action->dbaccess;
     
     $action->lay->set("warning", "");
     

@@ -27,7 +27,7 @@ function ws_addfldbranch(Action & $action)
     $addft = GetHttpVars("addft");
     $itself = (GetHttpVars("itself") == "Y");
     
-    $dbaccess = $action->GetParam("FREEDOM_DB");
+    $dbaccess = $action->dbaccess;
     $action->lay->set("warning", "");
     /**
      * @var Dir $doc

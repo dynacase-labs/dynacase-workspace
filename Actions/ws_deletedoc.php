@@ -23,7 +23,7 @@ function ws_deletedoc(Action & $action)
     $docid = $action->getArgument("id");
     $pdocid = $action->getArgument("paddid");
     $addft = $action->getArgument("addft", "del");
-    $dbaccess = $action->GetParam("FREEDOM_DB");
+    $dbaccess = $action->dbaccess;
     
     $action->lay->set("warning", "");
     $err = movementDocument($action, $dbaccess, false, $docid, $pdocid, $addft);

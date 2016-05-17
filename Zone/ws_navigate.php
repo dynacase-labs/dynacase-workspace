@@ -1,7 +1,7 @@
 <?php
 /*
  * @author Anakeen
- */
+*/
 /*
  * Display doucment explorer
  *
@@ -159,7 +159,7 @@ class ws_Navigate
     public function render()
     {
         
-        $dbaccess = $this->action->GetParam("FREEDOM_DB");
+        $dbaccess = $this->action->dbaccess;
         
         $tlayspaces = array();
         

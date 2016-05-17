@@ -19,10 +19,10 @@ function ws_renamefile(Action & $action)
     header('Content-type: text/xml; charset=utf-8');
     
     $mb = microtime();
-
+    
     $docid = GetHttpVars("id");
     $newname = GetHttpVars("newname");
-    $dbaccess = $action->GetParam("FREEDOM_DB");
+    $dbaccess = $action->dbaccess;
     $err = '';
     $action->lay->set("warning", "");
     

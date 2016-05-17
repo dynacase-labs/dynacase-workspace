@@ -15,7 +15,7 @@ include_once ("WORKSPACE/ws_folderListFormat.php");
 function ws_main(Action & $action)
 {
     
-    $dbaccess = $action->GetParam("FREEDOM_DB");
+    $dbaccess = $action->dbaccess;
     
     $nav = new ws_Navigate($action);
     $spaces = new SearchDoc($dbaccess, "WORKSPACE");
@@ -130,7 +130,7 @@ function ws_main(Action & $action)
     
     }
     function addOffline(&$action) {
-    $dbaccess = $action->GetParam("FREEDOM_DB");
+    $dbaccess = $action->dbaccess;
     $desktop=getTDoc($dbaccess,'FLDOFFLINE_'.Doc::getWhatUserId());
     if (! $desktop) {
     $desktop = createDoc($dbaccess,"DIR");  

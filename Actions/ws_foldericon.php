@@ -25,7 +25,7 @@ function ws_foldericon(Action & $action)
     $pdocid = $action->getArgument("paddid");
     $addid = $action->getArgument("addid");
     $addft = $action->getArgument("addft");
-    $dbaccess = $action->GetParam("FREEDOM_DB");
+    $dbaccess = $action->dbaccess;
     
     $action->lay->set("warning", "");
     

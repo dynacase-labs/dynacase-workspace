@@ -18,7 +18,7 @@ function ws_edithtmlfile(Action & $action, $istext = false)
     $docid = $action->getArgument("id");
     $aid = $action->getArgument("attrid");
     
-    $dbaccess = $action->GetParam("FREEDOM_DB");
+    $dbaccess = $action->dbaccess;
     //  $action->parent->AddJsRef($action->GetParam("CORE_PUBURL")."/FDL/Layout/editattr.js");
     $doc = new_doc($dbaccess, $docid);
     if (!$doc->isAlive()) $action->exitError(sprintf(_("Document %s is not alive") , $docid));

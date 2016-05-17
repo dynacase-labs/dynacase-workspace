@@ -23,7 +23,7 @@ function ws_restoredoc(Action & $action)
     $docid = $action->getArgument("id");
     $reload = ($action->getArgument("reload") == "Y");
     $containt = ($action->getArgument("containt") == "yes");
-    $dbaccess = $action->GetParam("FREEDOM_DB");
+    $dbaccess = $action->dbaccess;
     
     $action->lay->set("warning", "");
     $err = '';

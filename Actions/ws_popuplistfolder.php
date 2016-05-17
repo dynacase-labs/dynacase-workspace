@@ -15,7 +15,7 @@ function ws_popuplistfolder(Action & $action)
     $docid = $action->getArgument("id");
     $abstract = ($action->getArgument("abstract", 'N') == "Y");
     $zone = $action->getArgument("zone"); // special zone
-    $dbaccess = $action->GetParam("FREEDOM_DB");
+    $dbaccess = $action->dbaccess;
     $doc = new_Doc($dbaccess, $docid);
     //  if ($doc->doctype=="C") return; // not for familly
     $tsubmenu = array();

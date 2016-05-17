@@ -16,7 +16,7 @@ function ws_downloadfile(&$action)
 {
     $docid = $action->getArgument("id");
     $inline = ($action->getArgument("inline") == "yes");
-    $dbaccess = $action->GetParam("FREEDOM_DB");
+    $dbaccess = $action->dbaccess;
     
     $doc = new_doc($dbaccess, $docid);
     $err = $doc->control("view");

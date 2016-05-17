@@ -16,7 +16,7 @@ function ws_popupsimplefile(Action & $action)
     $docid = $action->getArgument("id");
     $abstract = ($action->getArgument("abstract", 'N') == "Y");
     $zone = $action->getArgument("zone"); // special zone
-    $dbaccess = $action->GetParam("FREEDOM_DB");
+    $dbaccess = $action->dbaccess;
     /**
      * @var _SIMPLEFILE $doc
      */

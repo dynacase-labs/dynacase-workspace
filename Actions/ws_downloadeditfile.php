@@ -15,7 +15,7 @@ include_once ("WORKSPACE/ws_downloadfile.php");
 function ws_downloadeditfile(Action & $action)
 {
     $docid = $action->getArgument("id");
-    $dbaccess = $action->GetParam("FREEDOM_DB");
+    $dbaccess = $action->dbaccess;
     
     $doc = new_doc($dbaccess, $docid);
     $err = $doc->control("edit");
